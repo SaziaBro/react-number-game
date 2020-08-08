@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 90,
         paddingTop: 36,
-        backgroundColor: '#f7287b',
+        backgroundColor: '#6E00B7',
         alignItems: 'center',
         justifyContent: 'center',
     },
     title: {
         fontFamily: 'regular',
-        color: 'black',
-        fontSize: 20,
+        color: 'white',
+        fontSize: 25,
 
     }
 

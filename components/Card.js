@@ -1,31 +1,23 @@
 import React from 'react';
-import {
-    View,
-    StyleSheet,
-    Text,
-} from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-const card = props => {
+const Card = props => {
     return (
-        <View styles={header}>
-            <Text styles={title}></Text>
-        </View>
+        <View style={{ ...styles.card, ...props.style }}>{props.children}</View>
     );
-
 };
-const styles = StyleSheet.create({
-    header: {
-        width: '100%',
-        height: '60%',
-        paddingTop: 36,
-        backgroundColor: '#f7287b',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    title: {
-        color: 'black',
-        fontSize: 18,
-    }
 
+const styles = StyleSheet.create({
+    card: {
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: 2 },//shadow for ios
+        shadowRadius: 6,
+        shadowOpacity: 0.26,
+        elevation: 8,//shadow for android
+        backgroundColor: 'white',
+        padding: 20,
+        borderRadius: 10
+    }
 });
-export default card;
+
+export default Card;
